@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Puppet Managed Page</title>
+    <style>
+      body { font-family: sans-serif; text-align: center; padding: 50px; }
+      h1 { color: #2c3e50; }
+      .info { border: 1px solid #ccc; padding: 20px; display: inline-block; background: #f9f9f9; }
+    </style>
+  </head>
+  <body>
+    <h1>🚀 Automation Successful!</h1>
+    <div class="info">
+      <p><strong>Operating System:</strong> <%= $facts['os']['name'] %> <%= $facts['os']['release']['full'] %></p>
+      <p><strong>Hostname:</strong> <%= $facts['networking']['hostname'] %></p>
+      <p><strong>IP Address:</strong> <%= $facts['networking']['ip'] %></p>
+      <p><strong>Total Memory:</strong> <%= $facts['memory']['system']['total'] %></p>
+      <p><strong>System Uptime:</strong> <%= $facts['system_uptime']['uptime'] %></p>
+    </div>
+    <p><em>Generated automatically by Puppet Master.</em></p>
+  </body>
+</html>

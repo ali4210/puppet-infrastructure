@@ -1,0 +1,6 @@
+# Ignore the secret data
+data/*.yaml
+
+# Ignore compiled files
+.resource_types
+*.retry
